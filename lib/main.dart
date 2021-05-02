@@ -20,14 +20,37 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/produtos');
-          },
-          child: Text('Produtos'),
-        ),
-      ),
+      body: Container (
+        padding: EdgeInsets.fromLTRB(20, 30, 20, 20),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/produtos');
+              },
+              child: Text('Produtos'),
+            ),
+            Container (
+              color: Colors.redAccent,
+                width: 250,
+                height: 100,
+                child: Row(
+                  children: [
+                    Text("IMAGEM"),
+                    Column(
+                      children: [
+                        Text("Jumperoo"),
+                      ],
+                    ),
+                  ],
+                )
+
+            ),
+          ],
+        )
+
+      )
+
     );
   }
 }
